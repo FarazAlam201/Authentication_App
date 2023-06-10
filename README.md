@@ -1,16 +1,13 @@
-# authentication_app
+## Authentication App
 
-A new Flutter project.
+Flutter project for Landing, Login and Signup Page, I develop this app from the Figma design. Link of Figma is given below:
 
-## Getting Started
+https://www.figma.com/file/VfsObgkTLApTky9x1YelaV/Login-Signup-UI-(Community)?type=design&node-id=0%3A1&t=3C5Ew1AYszMgBR7n-1
 
-This project is a starting point for a Flutter application.
+# Screen Shots 
 
-A few resources to get you started if this is your first Flutter project:
+<img src="https://github.com/FarazAlam201/Authentication_App/assets/90208567/6764af58-4e2b-4ff3-9cd5-0b7b2cc4a99f" width="200" height="400" />
+<img src="https://github.com/FarazAlam201/Authentication_App/assets/90208567/f7bc1359-4f2a-49f9-87c9-6ce0756e6811" width="200" height="400" />
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="https://github.com/FarazAlam201/Authentication_App/assets/90208567/adf134ef-6dd1-4c04-a6d4-f5946e28ff93" width="200" height="400" />
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
