@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:authentication_app/widgets/custom_button.dart';
 import 'package:authentication_app/widgets/signinsignup_button.dart';
 import 'package:flutter/material.dart';
@@ -6,13 +8,33 @@ import 'package:authentication_app/widgets/responsive_img.dart';
 import 'login_screen.dart';
 
 class SignupPage extends StatefulWidget {
-  const SignupPage({super.key});
-
+  // ignore: prefer_const_constructors_in_immutables
+  SignupPage({super.key});
   @override
   State<SignupPage> createState() => _SignupPageState();
 }
 
 class _SignupPageState extends State<SignupPage> {
+  final TextEditingController _passwordController = TextEditingController();
+  String generatedpassword = "";
+  void generatePassword() {
+    int passwordlength = 16;
+    String numbers = "1234567890";
+    String letters = "abcdefghijklmnopqrstuvwxyz";
+    String special = "!@#%^&*()_+{}[];:'<>/?|=-";
+    String getCharacters = "";
+    String password = "";
+    getCharacters = getCharacters + numbers + letters + special;
+    for (int i = 0; i < passwordlength; i++) {
+      int index = Random().nextInt(getCharacters.length);
+      password = password + getCharacters[index];
+    }
+    setState(() {
+      generatedpassword = password;
+      _passwordController.text = generatedpassword;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,13 +95,14 @@ class _SignupPageState extends State<SignupPage> {
                     children: [
                       _showText('Password*', const Color(0xff4F4F4F)),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: generatePassword,
                           child: _showText(
-                              'Forgot Password?', const Color(0xff4F4F4F))),
+                              'Generate Password?', const Color(0xff2F80ED))),
                     ],
                   ),
                 ),
                 TextField(
+                  controller: _passwordController,
                   decoration: InputDecoration(
                       suffixIcon: IconButton(
                         onPressed: () {},
